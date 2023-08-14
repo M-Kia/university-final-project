@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trading View</title>
+    <style>
+      .parent {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+      }
+      canvas, svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+      }
+
+      #bottom {
+        z-index: 1;
+        background-color: hsl(0, 100%, 97%);
+      }
+
+      #top {
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <canvas id="bottom" width="800" height="800"></canvas>
+      <svg id="top" width="800" height="800">
+        <circle
+          cx="500"
+          cy="500"
+          r="40"
+          stroke="black"
+          stroke-width="4"
+          fill="black"
+        ></circle>
+        <circle
+          cx="350"
+          cy="350"
+          r="40"
+          stroke="blue"
+          stroke-width="4"
+          fill="blue"
+        ></circle>
+        <circle
+          cx="150"
+          cy="50"
+          r="40"
+          stroke="red"
+          stroke-width="4"
+          fill="red"
+        ></circle>
+        <circle
+          cx="350"
+          cy="50"
+          r="40"
+          stroke="green"
+          stroke-width="4"
+          fill="green"
+        ></circle>
+        <circle
+          cx="650"
+          cy="650"
+          r="40"
+          stroke="yellow"
+          stroke-width="4"
+          fill="yellow"
+        ></circle>
+      </svg>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
